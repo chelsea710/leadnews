@@ -34,7 +34,19 @@ public class ArticleInfoControllerTest {
         MockHttpServletRequestBuilder content = MockMvcRequestBuilders.post("/api/v1/article/load_article_info")
                 .contentType(MediaType.APPLICATION_JSON_VALUE)
                 .content(mapper.writeValueAsBytes(articleInfoDto));
+        mvc.perform(content).andExpect(MockMvcResultMatchers.status().isOk()).andDo(MockMvcResultHandlers.print());
+    }
 
+
+    @Test
+    public void loadLoadArticleBehavior()throws Exception{
+        ArticleInfoDto articleInfoDto = new ArticleInfoDto();
+        articleInfoDto.setArticleId(1);
+        articleInfoDto.setAuthorId(1);
+        articleInfoDto.setEquipmentId(1);
+        MockHttpServletRequestBuilder content = MockMvcRequestBuilders.post("/api/v1/article/load_article_behavior")
+                .contentType(MediaType.APPLICATION_JSON_VALUE)
+                .content(mapper.writeValueAsBytes(articleInfoDto));
         mvc.perform(content).andExpect(MockMvcResultMatchers.status().isOk()).andDo(MockMvcResultHandlers.print());
     }
 

@@ -128,3 +128,4 @@ buildNumber.properties
 
 !/lib/rmb-0.1.1.jar
 !/lib/oscarJDBC16.jar
+*.iml
