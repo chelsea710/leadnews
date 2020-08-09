@@ -1,11 +1,12 @@
 package com.heima.model.mappers.app;
 
 import com.heima.model.behavior.pojos.ApLikesBehavior;
+import org.apache.ibatis.annotations.Param;
 
 public interface ApLikesBehaviorMapper {
     /**
      * 选择最后一条喜欢按钮
      * @return
      */
-    ApLikesBehavior selectLastLike(String burst, Integer objectId, Integer entryId, Short type);
+    ApLikesBehavior selectLastLike(@Param("burst") String burst,@Param("objectId")  Integer objectId,@Param("entryId")   Integer entryId,@Param("type")  Short type);
 }
