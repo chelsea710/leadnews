@@ -9,4 +9,8 @@ public interface ApUnlikesBehaviorMapper {
      * @return
      */
     ApUnlikesBehavior selectLastUnLike(@Param("entryId") Integer entryId,@Param("articleId")  Integer articleId);
+
+    int insert(ApUnlikesBehavior record);
+
+
 }

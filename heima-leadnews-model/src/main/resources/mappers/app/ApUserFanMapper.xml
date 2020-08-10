@@ -33,7 +33,7 @@
       )
     values (#{id}, #{userId}, #{fansId},
       #{fansName}, #{level}, #{createdTime},
-      #{isDisplay}, #{isShieldLetter}, #{isShieldComment},{#burst}
+      #{isDisplay}, #{isShieldLetter}, #{isShieldComment},#{burst}
       )
   </insert>
 

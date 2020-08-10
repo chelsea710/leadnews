@@ -1,6 +1,5 @@
-package com.heima.article.service.impl;
+package com.heima.user.service.impl;
 
-import com.heima.article.service.AppUserRelationService;
 import com.heima.common.zookeeper.Sequence;
 import com.heima.model.article.pojos.ApAuthor;
 import com.heima.model.behavior.dtos.FollowBehaviorDto;
@@ -15,6 +14,7 @@ import com.heima.model.user.pojos.ApUser;
 import com.heima.model.user.pojos.ApUserFan;
 import com.heima.model.user.pojos.ApUserFollow;
 import com.heima.user.service.AppFollowBehaviorService;
+import com.heima.user.service.AppUserRelationService;
 import com.heima.utils.common.BurstUtils;
 import com.heima.utils.threadlocal.AppThreadLocalUtils;
 import org.springframework.beans.factory.annotation.Autowired;

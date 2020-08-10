@@ -1,6 +1,5 @@
 package com.heima.model.mappers.app;
 
-import com.heima.model.article.pojos.ApArticleContent;
 import com.heima.model.user.pojos.ApUserFan;
 import org.apache.ibatis.annotations.Param;
 

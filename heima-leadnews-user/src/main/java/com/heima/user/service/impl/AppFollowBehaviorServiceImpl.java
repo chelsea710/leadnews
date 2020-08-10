@@ -11,6 +11,7 @@ import com.heima.model.user.pojos.ApUser;
 import com.heima.user.service.AppFollowBehaviorService;
 import com.heima.utils.threadlocal.AppThreadLocalUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
@@ -27,6 +28,7 @@ public class AppFollowBehaviorServiceImpl implements AppFollowBehaviorService {
     private ApFollowBehaviorMapper apFollowBehaviorMapper;
 
     @Override
+    @Async
     public ResponseResult saveFollowBehavior(FollowBehaviorDto dto) {
         ApUser user = AppThreadLocalUtils.getUser();
         // 用户和设备不能同时为空
